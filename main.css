@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: #2ab2af;
+    --yellow: #c0df34;
+    --gray: #e5eff5;
+    --blue: #98a6bd;
+}
+
+body {
+    background-color: var(--gray);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    display: grid;
+    width: 600px;
+    height: 450px;
+    background-color: var(--cyan);
+    grid-template: 45% 55% / repeat(2, 1fr);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.community {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    grid-column: 1 / span 2;
+    padding: 5% 10% 5% 5%;
+}
+
+.community__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 1em;
+}
+
+.community__subtitle {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: .7em;
+}
+
+.community__text {
+    line-height: 1.5em;
+    color: var(--blue);
+}
+
+.subscription {
+    padding: 10%;
+    background-color: var(--cyan);
+    border-radius: 0 0 0 10px;
+}
+
+.subscription__title {
+    color: var(--gray);
+    font-size: 1.1em;
+    margin-bottom: .5em;
+}
+
+.subscription__price {
+    display: flex;
+    color: var(--gray);
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 2em;
+}
+
+.subscription__interval {
+    font-size: .5em;
+    font-weight: 400;
+    color: hsl(181, 51%, 63%);
+    margin-left: 10px;
+}
+
+.subscription__text {
+    display: block;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.subscription__button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--yellow);
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+}
+
+.us {
+    padding: 10%;
+    background-color: hsl(179, 47%, 52%);
+    border-radius: 0 0 10px 0;
+    color: var(--gray);
+}
+
+.us__title {
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+.us__list {
+    list-style: none;
+    margin-top: 1em;
+    color: hsl(181, 71%, 77%);
+}
+
+.us__item {
+    line-height: 1.3em;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 628px) {
+
+    .container {
+        height: 100%;
+        padding: 5%;
+    }
+
+    .card {
+        grid-template: 20% 1fr 1fr / 1fr;
+        width: 100%;
+        height: auto;
+    }
+
+    .community {
+        grid-column: 1;
+    }
+
+    .subscription {
+        border-radius: 0;
+    }
+
+    .us {
+        border-radius: 0 0 10px 10px;
+    }
+
+}
